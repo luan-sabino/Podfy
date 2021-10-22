@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+<div style="display:flex; justify-content: center; align-items:center;">
+    <img src="./src/img/logo_size.svg" width="200px" heigth="auto"/>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2 align="left">Sobre</h2>
 
-## Available Scripts
+Projeto realizado com o intuito de clonar a interface do Spotify fazendo uso de ReactJs e Tailwindcss.
 
-In the project directory, you can run:
+<h2 align="center">💻</h2>
 
-### `npm start`
+![Desktop](src/img/desktop_preview.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Descrição do Projeto
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A aplicação tinha como requisitos a criação de pelo menos duas paginas, sendo uma populada dinamicamente apartir de uma API, apresentando cards/tabelas/listas. E uma segunda pagina com a presença de um Form. Visando manter o layout unico do Spotify sem adicionar elementos que pudessem quebrar o fluxo de uso, decidi inserir o form dentro de uma modal, servindo como um "Bug Report" e mantendo a estrutura da pagina. 
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Pré-requisitos
 
-### `npm run build`
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Inicializando a aplicação
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Primeiro você vai precisar clonar o repositorio:
+  `gh repo clone luan-sabino/desafio-supersim`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Abra a pasta pelo terminal, e em seguida execute: `npm install` para instalar as dependencias do projeto.
 
-### `npm run eject`
+Apos isso, execute o comando `npm start`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+A partir dai basta acessar o seu localhost: `localhost:3000`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠 Tecnologias
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+As seguintes ferramentas foram usadas na construção do projeto:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [Node.js](https://nodejs.org/en/)
+- [React.js](https://pt-br.reactjs.org)
+- [Create-react-app](https://create-react-app.dev)
+- [Tailwindcss](https://tailwindcss.com)
+- [React-icons](https://react-icons.github.io/)
+- [ListenNotesAPI](https://www.listennotes.com/api/)
 
-## Learn More
+### Autor
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<a href="https://luan-sabino.github.io">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/39681078?v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Luan Sabino</b></sub></a> <a href="https://luan-sabino.github.io" title="Portifolio">🚀</a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Feito com ❤️ por Luan Sabino 👋🏽 Entre em contato!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![Twitter Badge](https://img.shields.io/badge/-@lupsabino-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/lupsabino)](https://twitter.com/lupsabino) [![Linkedin Badge](https://img.shields.io/badge/-Luan-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/luan-sabino/)](https://www.linkedin.com/in/luan-sabino/) 
