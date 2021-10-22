@@ -3,6 +3,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      screens:{
+        '1/4xl':'1440px',
+        '2/4xl':'1512px',
+        '3/4xl':'1710px',
+        '4/4xl':'1915px',
+      },
       colors: {
         primary: '#282828',
         unselected: '#B3B3B3',
@@ -26,7 +32,8 @@ module.exports = {
       },
       boxShadow: {
         banner: "10px 0 15px 3px rgba(0, 0, 0, 0.1)",
-        card: "0 8px 24px rgb(0 0 0 / 50%);"
+        card: "0 8px 24px rgb(0 0 0 / 50%);",
+        button: "0 8px 8px rgb(0 0 0 / 30%);"
       }
     },
   },
