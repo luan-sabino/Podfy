@@ -1,6 +1,6 @@
 {
   "name": "desafio-supersim",
-  "proxy": "https://listen-api-test.listennotes.com/api/v2",
+  "proxy": "https://listen-api-test.listennotes.com/api/v2/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
