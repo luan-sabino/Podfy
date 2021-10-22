@@ -1,5 +1,5 @@
 import LongCard from "./LongCard";
-import useWindowSize from "../services/useWindowSize";
+//import useWindowSize from "../services/useWindowSize";
 import isLoadingContext from "../services/isLoadingContext";
 import { useContext } from "react";
 
@@ -7,10 +7,23 @@ export default function LongCardCollection(props){
 
     var isLoading = useContext(isLoadingContext);
 
+    function setResponsiveClass(i){
+        switch(i){
+            case 1: case 2:  return "sm:flex";
+            case 3: case 4:  return "md:flex";
+            case 5: case 6:  return "lg:flex";
+            case 7: case 8:  return "2xl:flex";
+            case 9: case 10: return "2xl:flex";
+            default: console.log('some issue: ', i); break;
+        }
+    }
+
     function handleLoading(){
         let elements = []
-        for(let i = 0; i < 4; i++){
-            elements.push(<LongCard key={i}/>)
+        let visibilityValue = "";
+        for(let i = 1; i <= 10; i++){
+            visibilityValue = setResponsiveClass(i);
+            elements.push(<LongCard key={i} handleVisibility={visibilityValue}/>)
         }
         return elements;
     }
@@ -26,8 +39,9 @@ export default function LongCardCollection(props){
                 </header>
                 <div className="grid grid-flow-col grid-rows-2 gap-y-4 gap-x-6 w-full" >
                     {(data != null ? data.map((podcast, index)=>{
-                        if(index < 6)
-                            return <LongCard key={index} banner={podcast.thumbnail} title={podcast.title} handleVisibility="sm:flex" handleMouseOver={props.backgroundHandler}/>
+                        if(index <= 9){
+                            return <LongCard key={index} banner={podcast.thumbnail} title={podcast.title} handleVisibility={setResponsiveClass(index+1)} handleMouseOver={props.backgroundHandler}/>
+                        }
                         return '';    
                     }) : '')}
                 </div>
