@@ -14,6 +14,7 @@ Projeto realizado com o intuito de clonar a interface do Spotify fazendo uso de 
 
 A aplicação tinha como requisitos a criação de pelo menos duas paginas, sendo uma populada dinamicamente apartir de uma API, apresentando cards/tabelas/listas. E uma segunda pagina com a presença de um Form. Visando manter o layout unico do Spotify sem adicionar elementos que pudessem quebrar o fluxo de uso, decidi inserir o form dentro de uma modal, servindo como um "Bug Report" e mantendo a estrutura da pagina. 
 
+Se quiser ver a aplicação rodando, acesse [Podfy](https://podfy.netlify.app)
 
 ## Pré-requisitos
 
