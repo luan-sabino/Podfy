@@ -7,7 +7,7 @@ import FetchApi from '../services/fetchApi';
 import { useEffect, useState } from 'react';
 import isLoadingContext from '../services/isLoadingContext';
 
-/*
+/*Infelizmente não funciona com Imagens Cross-origin
 async function getAverageColor(img) {
     let context = document.createElement('canvas').getContext('2d');
     var data;
@@ -33,18 +33,26 @@ export default function Home(){
     
     useEffect(()=>{
         FetchApi.getBestsPodcasts();
+        FetchApi.setDataByGenres();
         setIsLoading(false);
     }, [])
 
     function handleBackgroundColor(e){
-        //let rgb = getAverageColor(e.currentTarget.querySelector("img").src); Infelizmente não funciona com Imagens Cross-origin
-        //console.log(e.currentTarget.querySelector("img"))
-        //document.documentElement.style.setProperty('--current-bg', 'rgb(' + rgb + ',0.30)');
+        let rgb = e.currentTarget.querySelector("#rgb").textContent
+        document.documentElement.style.setProperty('--current-bg', 'rgb(' + rgb + ',0.30)');
+    }
+
+    function renderCardCollections(){
+        var elements = [];
+        for(let i = 1; i <= 5; i++){
+            elements.push(<CardCollection key={i} index={i}/>)
+        }
+        return elements;
     }
 
     return(
         <isLoadingContext.Provider value={isLoading}>
-            <main className="grid gap-y-4 grid-cols-1">
+            <main className="grid gap-y-4 grid-cols-1 pb-6">
                 <div className={"bg-gradient-to-b from-currentBG to-transparent"}>
                     <header className={"flex py-4 px-8 justify-between"}>
                         <div className="flex">
@@ -63,8 +71,7 @@ export default function Home(){
                     </header>
                     <LongCardCollection backgroundHandler={handleBackgroundColor}/>    
                 </div>
-                <CardCollection title="Boas vindas"/>
-                <CardCollection title="Boas vindas"/>
+                {renderCardCollections()}
             </main>
         </isLoadingContext.Provider>
     );
