@@ -6,6 +6,7 @@ import LongCardCollection from './LongCardCollection';
 import FetchApi from '../services/fetchApi';
 import { useEffect, useState } from 'react';
 import isLoadingContext from '../services/isLoadingContext';
+import BugReport from './BugReport';
 
 /*Infelizmente não funciona com Imagens Cross-origin
 async function getAverageColor(img) {
@@ -73,6 +74,7 @@ export default function Home(){
                 </div>
                 {renderCardCollections()}
             </main>
+            <BugReport/>
         </isLoadingContext.Provider>
     );
 }
