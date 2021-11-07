@@ -33,9 +33,12 @@ export default function Home(){
     const [isLoading, setIsLoading] = useState(true);
     
     useEffect(()=>{
-        FetchApi.getBestsPodcasts();
-        FetchApi.setDataByGenres();
-        setIsLoading(false);
+        Promise.all([
+            FetchApi.getBestsPodcasts(),
+            FetchApi.setDataByGenres()
+        ]).then(()=>{
+            setIsLoading(false);
+        })
     }, [])
 
     function handleBackgroundColor(e){

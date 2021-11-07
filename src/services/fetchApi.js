@@ -6,11 +6,11 @@ export default class FetchApi {
       endpoint="/api/";
 
 
-    let response = await fetch(
+    await fetch(
       endpoint + "best_podcasts?genre_id=93&page=1&region=us&safe_mode=0",
       { method: "GET", headers: { "content-type": "application/json" } }
-    ).then((res) => res.json());
-    localStorage.setItem("best_podcasts", JSON.stringify(response));
+    ).then((res) => res.json()).then(data => localStorage.setItem("best_podcasts", JSON.stringify(data))).catch(err => console.log(err));
+    
   }
 
   static async populateAnotherCategory(id, key) {
@@ -18,11 +18,11 @@ export default class FetchApi {
     if(window.location.hostname !== 'localhost')
       endpoint="/api/";
 
-    let response = await fetch(
+    await fetch(
       endpoint + `best_podcasts?genre_id=93&page=1&region=us&safe_mode=0`,
       { method: "GET", headers: { "content-type": "application/json" } }
-    ).then((res) => res.json());
-    localStorage.setItem(key, JSON.stringify(response));
+    ).then((res) => res.json()).then(data => localStorage.setItem(key, JSON.stringify(data))).catch(err => console.log(err));
+    
   }
 
   static async setDataByGenres(){
